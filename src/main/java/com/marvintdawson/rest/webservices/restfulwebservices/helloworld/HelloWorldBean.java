@@ -1,4 +1,4 @@
-package com.marvintdawson.rest.webservices.restfulwebservices;
+package com.marvintdawson.rest.webservices.restfulwebservices.helloworld;
 
 public class HelloWorldBean {
     private String message;

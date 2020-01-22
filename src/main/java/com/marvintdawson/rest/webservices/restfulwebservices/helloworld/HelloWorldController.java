@@ -1,10 +1,12 @@
-package com.marvintdawson.rest.webservices.restfulwebservices;
+package com.marvintdawson.rest.webservices.restfulwebservices.helloworld;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 // Controller
+@CrossOrigin(origins="http://localhost:4200") // coming from the Angular server
 @RestController
 public class HelloWorldController {
 
@@ -15,13 +17,14 @@ public class HelloWorldController {
     // hellow-world
     @GetMapping(path="/hello-world")
     public String helloWorld() {
-        return "Hello World";
+        return "Hello Marvs World";
     }
 
     // hellow-world-bean
     @GetMapping(path="/hello-world-bean")
     public HelloWorldBean helloWorldBean() {
-        return new HelloWorldBean("Hello World Bean");
+    	// throw new RuntimeException("Some Error Has Happen, Please Contact Support at 800-597-6321");
+        return new HelloWorldBean("Hello World Bean - Changed");
     }
 
 
